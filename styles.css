@@ -1,0 +1,338 @@
+/* styles.css */
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #333;
+}
+
+a {
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #FF8800;
+  text-decoration: none;
+}
+
+/* Navbar Logo Animation */
+.navbar-brand img {
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.navbar-brand:hover img {
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+/* Navbar Main */
+.navbar {
+  background-color: #739B73;
+}
+
+.nav-link-donate {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 1.1rem; 
+  transition: all 0.3s ease; 
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+}
+
+.navbar .nav-item:hover {
+  background-color: transparent; 
+}
+
+.navbar .nav-link:hover {
+  transform: translateY(-3px) scale(1.1); 
+}
+
+.navbar .nav-item.active {
+  background-color: transparent; 
+}
+/* Logo moved from inline css for better responsive viewing on mobile */
+.navbar-brand img {
+  width: 200px; 
+  height: 100px;
+}
+
+/* Intro */
+#intro {
+  padding: 100px 0;
+}
+
+#intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#intro p {
+  font-size: .9rem;
+  line-height: 1.8;
+ 
+}
+
+/* Content */
+#content {
+  padding: 80px 0;
+}
+/* Mission Statement */
+.mission-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+/* Carousel Slide button contrast fix */
+.carousel-item {
+  padding-top: 50px;
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel-indicators li {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  margin: 15px;
+  padding: 7px;
+  opacity: .2;
+}
+
+.carousel-indicators .active {
+  background-color: #FF8800;
+  opacity: .2;
+  border-color: #333;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control-prev:focus,
+.carousel-control-next:focus,
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  color: #FF8800;
+  text-decoration: none;
+  outline: none;
+}
+
+.carousel-control-prev {
+  left: 5%;
+}
+
+.carousel-control-next {
+  right: 5%;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-gutters > .col-md-12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+/* Footer */
+footer {
+  position: relative;
+  padding: 40px 0;
+  background-color: #739B73;
+  z-index: 1;
+  
+}
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./images/FooterOverlay.svg');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: .18;
+  z-index: -1;
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+footer p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  color: #333;
+  z-index: 999;
+}
+
+.btn-light:hover {
+  background-color: #e2e6ea;
+  color: #333;
+  z-index: 999;
+}
+
+.btn-primary {
+  background-color: #FF9800;
+  border-color: #FF9800;
+  z-index: 999;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #E68A00;
+  border-color: #E68A00;
+  z-index: 999;
+}
+
+
+
+/* Mobile-Hide class for hiding elements on mobile devices */
+.Mobile-Hide {
+  display: inline; 
+}
+
+/* Mobile Responsiveness and Iphone Fix */
+@media (max-width: 768px) {
+  .Mobile-Hide {
+    display: none; 
+  }
+  .carousel-item {
+    height: 83vh;
+  }
+  .navbar-brand img {
+    width: 100%;
+    height: 50px;
+  }  
+  #about img{
+    width: 100%;
+    height: 50px;
+    margin: 20px;
+  }
+  .responsiveMobile {
+    height: 100%;
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+
+/* Media query for tablets */
+@media (max-width: 992px) {
+  .carousel-item {
+    height: 85vh;
+  }
+}
+
+/* Event Page */
+.card-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.btn-orange {
+    background-color: #f57c00;
+    border-color: #f57c00;
+    color: #fff;
+}
+
+.btn-orange:hover {
+    background-color: #f89740;
+    border-color: #f89740;
+    color: #fff;
+}
+
+#events {
+    padding: 5rem 0;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    transition: all 0.3s;
+}
+
+.event-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.event-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.event-card .card-body {
+  flex-grow: 1;
+}
+
+
+
+
